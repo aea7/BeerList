@@ -1,11 +1,16 @@
-import React, {useState, useCallback} from 'react';
+import React, {useState, useCallback, useEffect} from 'react';
 import {TouchableOpacity, View, SafeAreaView, Text, TextInput, Image, FlatList} from 'react-native';
 
-import data from '../data/data'
 import styles from '../styles/BeerList'
 import colors from "../styles/Colors";
 
 // name, image_url, first_brewed displayed
+let page = 1;
+let data = {};
+
+const getNextUrl = (page: number) => {
+    return `https://api.punkapi.com/v2/beers?page=${page}&per_page=10`
+};
 
 const renderBeerItem = ({item, index}) => {
     return (
@@ -22,7 +27,7 @@ const renderBeerItem = ({item, index}) => {
     )
 };
 
-const filterList = (input, setText, setList) => {
+const filterList = (input, setText, list, setList) => {
     setText(input);
     setList(data.filter(beer => {
         const beerItem = `${beer.name.toLowerCase()} ${beer.first_brewed}`;
@@ -30,7 +35,7 @@ const filterList = (input, setText, setList) => {
     }))
 };
 
-const renderListHeader = (text, setText, setList) => {
+const renderListHeader = (text, setText, list, setList) => {
     return (
         <View style={styles.filter_container}>
             <TextInput
@@ -40,7 +45,7 @@ const renderListHeader = (text, setText, setList) => {
                 value={text}
                 onChangeText={input => {
                     console.log(input);
-                    filterList(input, setText, setList);
+                    filterList(input, setText, list, setList);
                 }
                 }
             />
@@ -49,14 +54,30 @@ const renderListHeader = (text, setText, setList) => {
 };
 
 const BeerList = () => {
-
     const [text, setText] = useState("");
-    const [list, setList] = useState(data);
-    const beerItemCallback = useCallback(({ item, index }) => renderBeerItem({ item, index}));
+    const [list, setList] = useState({});
+    const [url, setUrl] = useState(getNextUrl(page));
+    const beerItemCallback = useCallback(({item, index}) => renderBeerItem({item, index}));
+
+    async function getMoreBeers() {
+        console.log(url);
+        fetch(url)
+            .then(res => res.json())
+            .then(res => {
+                    setList(res);
+                    data = res;
+            })
+            .catch((error) => console.log(error.toString()))
+    }
+
+    useEffect(() => {
+        getMoreBeers();
+    }, []);
+
     return (
         <SafeAreaView style={styles.container}>
             <FlatList
-                ListHeaderComponent={renderListHeader(text, setText, setList)}
+                ListHeaderComponent={renderListHeader(text, setText, list, setList)}
                 renderItem={beerItemCallback}
                 keyExtractor={(item, index) => index.toString()}
                 data={list}
