@@ -37,6 +37,12 @@ export default StyleSheet.create({
         fontSize: 16,
         backgroundColor: colors.filter_background,
         padding: 10
+    },
+    total_field: {
+        fontWeight: 'bold',
+        fontSize: 16,
+        backgroundColor: colors.light_gray,
+        padding: 10
     }
 
 });

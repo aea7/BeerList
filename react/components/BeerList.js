@@ -5,10 +5,13 @@ import styles from '../styles/BeerList'
 import colors from "../styles/Colors";
 
 // name, image_url, first_brewed displayed
-let page = 1;
-let data = {};
+let page, data, searching, count;
+data = {};
+page = 1;
+searching = false;
+count = 0;
 
-const getNextUrl = (page: number) => {
+const getNextUrl = () => {
     return `https://api.punkapi.com/v2/beers?page=${page}&per_page=10`
 };
 
@@ -27,7 +30,8 @@ const renderBeerItem = ({item, index}) => {
     )
 };
 
-const filterList = (input, setText, list, setList) => {
+const filterList = (input, setText, setList) => {
+    searching = (input !== '');
     setText(input);
     setList(data.filter(beer => {
         const beerItem = `${beer.name.toLowerCase()} ${beer.first_brewed}`;
@@ -35,7 +39,7 @@ const filterList = (input, setText, list, setList) => {
     }))
 };
 
-const renderListHeader = (text, setText, list, setList) => {
+const renderListHeader = (text, setText, setList) => {
     return (
         <View style={styles.filter_container}>
             <TextInput
@@ -44,8 +48,7 @@ const renderListHeader = (text, setText, list, setList) => {
                 style={styles.filter_field}
                 value={text}
                 onChangeText={input => {
-                    console.log(input);
-                    filterList(input, setText, list, setList);
+                    filterList(input, setText, setList);
                 }
                 }
             />
@@ -54,33 +57,70 @@ const renderListHeader = (text, setText, list, setList) => {
 };
 
 const BeerList = () => {
-    const [text, setText] = useState("");
+    const [totalBeers, setTotalBeers] = useState(10);
+    const [text, setText] = useState('');
     const [list, setList] = useState({});
-    const [url, setUrl] = useState(getNextUrl(page));
     const beerItemCallback = useCallback(({item, index}) => renderBeerItem({item, index}));
 
     async function getMoreBeers() {
-        console.log(url);
+        const url = getNextUrl();
         fetch(url)
             .then(res => res.json())
             .then(res => {
-                    setList(res);
-                    data = res;
+                    if (page === 1){
+                        setList(res);
+                        data = res;
+                    }else {
+                        setList([...list, ...res]);
+                        data = [...list, ...res];
+                    }
+            })
+            .catch((error) => console.log(error.toString()))
+    }
+
+    const loadMoreBeer = () => {
+        if (searching) {
+            //
+        }else{
+            page++;
+            getMoreBeers();
+        }
+    };
+
+    async function countTotalNumberOfBeers(page: number) {
+        let url = `https://api.punkapi.com/v2/beers?page=${page}&per_page=80`;
+        fetch(url)
+            .then(res => res.json())
+            .then(res => {
+                if (res.length === 0) {
+                    setTotalBeers(count)
+                    return;
+                }
+                let nextPage = page + 1;
+                count += res.length;
+                countTotalNumberOfBeers(nextPage)
             })
             .catch((error) => console.log(error.toString()))
     }
 
     useEffect(() => {
         getMoreBeers();
+        if (page === 1){
+            countTotalNumberOfBeers(page);
+        }
+
     }, []);
 
     return (
         <SafeAreaView style={styles.container}>
+            <Text style={styles.total_field}> Total Beers: {totalBeers} </Text>
             <FlatList
-                ListHeaderComponent={renderListHeader(text, setText, list, setList)}
+                ListHeaderComponent={renderListHeader(text, setText, setList)}
                 renderItem={beerItemCallback}
                 keyExtractor={(item, index) => index.toString()}
                 data={list}
+                onEndReached={loadMoreBeer}
+                onEndReachedThreshold={0}
             >
             </FlatList>
         </SafeAreaView>
