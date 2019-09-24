@@ -15,21 +15,6 @@ const getNextUrl = () => {
     return `https://api.punkapi.com/v2/beers?page=${page}&per_page=10`
 };
 
-const renderBeerItem = ({item, index}) => {
-    return (
-        <TouchableOpacity style={[styles.item_container, {backgroundColor: index % 2 === 1 ? colors.light_gray : ''}]}>
-            <Image
-                style={styles.image_style}
-                source={{uri: item.image_url}}
-            />
-            <View style={styles.text_container}>
-                <Text style={styles.name}> {item.name}</Text>
-                <Text style={styles.first_brewed}> {item.first_brewed}</Text>
-            </View>
-        </TouchableOpacity>
-    )
-};
-
 const filterList = (input, setText, setList) => {
     searching = (input !== '');
     setText(input);
@@ -56,11 +41,31 @@ const renderListHeader = (text, setText, setList) => {
     )
 };
 
-const BeerList = () => {
+const BeerList = ({navigation}) => {
     const [totalBeers, setTotalBeers] = useState(10);
     const [text, setText] = useState('');
-    const [list, setList] = useState({});
+    const [list, setList] = useState([]);
     const beerItemCallback = useCallback(({item, index}) => renderBeerItem({item, index}));
+
+    const renderBeerItem = ({item, index}) => {
+        return (
+            <TouchableOpacity
+                style={[styles.item_container, {backgroundColor: index % 2 === 1 ? colors.light_gray : ''}]}
+                onPress={() => navigation.navigate('BeerDetail', {
+                    beerItem: item
+                })}
+            >
+                <Image
+                    style={styles.image_style}
+                    source={{uri: item.image_url}}
+                />
+                <View style={styles.text_container}>
+                    <Text style={styles.name}> {item.name}</Text>
+                    <Text style={styles.first_brewed}> {item.first_brewed}</Text>
+                </View>
+            </TouchableOpacity>
+        )
+    };
 
     async function getMoreBeers() {
         const url = getNextUrl();
@@ -68,8 +73,8 @@ const BeerList = () => {
             .then(res => res.json())
             .then(res => {
                     if (page === 1){
-                        setList(res);
-                        data = res;
+                        setList([...res]);
+                        data = [...res];
                     }else {
                         setList([...list, ...res]);
                         data = [...list, ...res];
@@ -93,7 +98,7 @@ const BeerList = () => {
             .then(res => res.json())
             .then(res => {
                 if (res.length === 0) {
-                    setTotalBeers(count)
+                    setTotalBeers(count);
                     return;
                 }
                 let nextPage = page + 1;

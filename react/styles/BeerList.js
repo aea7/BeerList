@@ -12,11 +12,9 @@ export default StyleSheet.create({
         paddingVertical: 10,
         borderBottomWidth: 2,
         borderBottomColor: colors.border
-
     },
     text_container: {
         justifyContent: 'space-around'
-
     },
     image_style: {
         width: 50,
