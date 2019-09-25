@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BeerDetail renders correctly 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "flexGrow": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#F5FCFF",
+          "flex": 1,
+          "marginTop": 25,
+        }
+      }
+    >
+      <Image
+        source={
+          Object {
+            "uri": "https://images.punkapi.com/v2/keg.png",
+          }
+        }
+        style={
+          Object {
+            "borderRadius": 10,
+            "height": 250,
+            "marginHorizontal": 10,
+            "width": 250,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "justifyContent": "space-around",
+            "paddingTop": 25,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#666666",
+              "fontSize": 19,
+              "fontWeight": "bold",
+              "padding": 10,
+            }
+          }
+        >
+           Name: 
+          Buzz
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#666666",
+              "fontSize": 19,
+              "fontWeight": "bold",
+              "padding": 10,
+            }
+          }
+        >
+           Description: 
+          A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#666666",
+              "fontSize": 19,
+              "fontWeight": "bold",
+              "padding": 10,
+            }
+          }
+        >
+           Alcohol: 
+          4.5
+          %
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#666666",
+              "fontSize": 19,
+              "fontWeight": "bold",
+              "padding": 10,
+            }
+          }
+        >
+           Food Pairings: 
+          Spicy chicken tikka masala
+          Grilled chicken quesadilla
+          Caramel toffee cake
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
