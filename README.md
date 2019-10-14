@@ -1,4 +1,4 @@
-# Medicii Task - Abdullah Ak
+# Beer Listing App using Punkapi, React Native, React hooks, Jest etc.
 
 Using the API of https://punkapi.com/documentation/v2, lists the beers and has the ability to search for beers and
 go into a detail page of the beer.
