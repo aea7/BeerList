@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.medicibeer">
+  package="com.beerlist">
 
     <uses-permission android:name="android.permission.INTERNET" />
 

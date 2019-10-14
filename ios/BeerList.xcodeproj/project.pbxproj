@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* MediciBeerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MediciBeerTests.m */; };
+		00E356F31AD99517003FC87E /* BeerListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MediciBeerTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -15,11 +15,11 @@
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* MediciBeerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MediciBeerTests.m */; };
-		657D0A3B69A723C43A031280 /* libPods-MediciBeer-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DDD903685D9EF67748771AF /* libPods-MediciBeer-tvOS.a */; };
-		6C001E2F5FF3B9E390AB2DCC /* libPods-MediciBeer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F962B9D4E7B1F857D9F1EE7 /* libPods-MediciBeer.a */; };
-		AB114662CE94C37A0EE4E641 /* libPods-MediciBeerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3668D2A42796E73278F67A4 /* libPods-MediciBeerTests.a */; };
-		B2B5D7AE4024E18C20D24DF4 /* libPods-MediciBeer-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAFD849A566A5277B907458 /* libPods-MediciBeer-tvOSTests.a */; };
+		2DCD954D1E0B4F2C00145EB5 /* BeerListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MediciBeerTests.m */; };
+		657D0A3B69A723C43A031280 /* libPods-BeerList-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DDD903685D9EF67748771AF /* libPods-MediciBeer-tvOS.a */; };
+		6C001E2F5FF3B9E390AB2DCC /* libPods-BeerList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F962B9D4E7B1F857D9F1EE7 /* libPods-MediciBeer.a */; };
+		AB114662CE94C37A0EE4E641 /* libPods-BeerListTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3668D2A42796E73278F67A4 /* libPods-MediciBeerTests.a */; };
+		B2B5D7AE4024E18C20D24DF4 /* libPods-BeerList-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAFD849A566A5277B907458 /* libPods-MediciBeer-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,43 +28,43 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = MediciBeer;
+			remoteInfo = BeerList;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "MediciBeer-tvOS";
+			remoteInfo = "BeerList-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* MediciBeerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MediciBeerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* BeerListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MediciBeerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* MediciBeerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediciBeerTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* MediciBeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediciBeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = MediciBeer/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = MediciBeer/AppDelegate.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* BeerListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediciBeerTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* BeerList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediciBeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = BeerList/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = BeerList/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MediciBeer/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MediciBeer/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MediciBeer/main.m; sourceTree = "<group>"; };
-		15C172DDB5C449D51B048FA4 /* Pods-MediciBeer-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediciBeer-tvOS.release.xcconfig"; path = "Target Support Files/Pods-MediciBeer-tvOS/Pods-MediciBeer-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		1735CF94FD404460BBB2811B /* Pods-MediciBeer-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediciBeer-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-MediciBeer-tvOS/Pods-MediciBeer-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		1DDD903685D9EF67748771AF /* libPods-MediciBeer-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MediciBeer-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F962B9D4E7B1F857D9F1EE7 /* libPods-MediciBeer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MediciBeer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		263D956BEB693A0D48306728 /* Pods-MediciBeer-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediciBeer-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-MediciBeer-tvOSTests/Pods-MediciBeer-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* MediciBeer-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MediciBeer-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* MediciBeer-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MediciBeer-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3864D17B8B10108864922BAB /* Pods-MediciBeerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediciBeerTests.release.xcconfig"; path = "Target Support Files/Pods-MediciBeerTests/Pods-MediciBeerTests.release.xcconfig"; sourceTree = "<group>"; };
-		8C1C1E77E402D643631CCABA /* Pods-MediciBeer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediciBeer.debug.xcconfig"; path = "Target Support Files/Pods-MediciBeer/Pods-MediciBeer.debug.xcconfig"; sourceTree = "<group>"; };
-		AEAFD849A566A5277B907458 /* libPods-MediciBeer-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MediciBeer-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9D82DD3AA5A9C2F5EBAAB55 /* Pods-MediciBeer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediciBeer.release.xcconfig"; path = "Target Support Files/Pods-MediciBeer/Pods-MediciBeer.release.xcconfig"; sourceTree = "<group>"; };
-		CF0250FE7C507365E5F86DD3 /* Pods-MediciBeerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediciBeerTests.debug.xcconfig"; path = "Target Support Files/Pods-MediciBeerTests/Pods-MediciBeerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E3668D2A42796E73278F67A4 /* libPods-MediciBeerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MediciBeerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E78656708D96353781D2E674 /* Pods-MediciBeer-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediciBeer-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-MediciBeer-tvOSTests/Pods-MediciBeer-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = BeerList/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BeerList/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = BeerList/main.m; sourceTree = "<group>"; };
+		15C172DDB5C449D51B048FA4 /* Pods-BeerList-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediciBeer-tvOS.release.xcconfig"; path = "Target Support Files/Pods-MediciBeer-tvOS/Pods-MediciBeer-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		1735CF94FD404460BBB2811B /* Pods-BeerList-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediciBeer-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-MediciBeer-tvOS/Pods-MediciBeer-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		1DDD903685D9EF67748771AF /* libPods-BeerList-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MediciBeer-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F962B9D4E7B1F857D9F1EE7 /* libPods-BeerList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MediciBeer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		263D956BEB693A0D48306728 /* Pods-BeerList-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediciBeer-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-MediciBeer-tvOSTests/Pods-MediciBeer-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* BeerList-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MediciBeer-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* BeerList-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MediciBeer-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3864D17B8B10108864922BAB /* Pods-BeerListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediciBeerTests.release.xcconfig"; path = "Target Support Files/Pods-MediciBeerTests/Pods-MediciBeerTests.release.xcconfig"; sourceTree = "<group>"; };
+		8C1C1E77E402D643631CCABA /* Pods-BeerList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediciBeer.debug.xcconfig"; path = "Target Support Files/Pods-MediciBeer/Pods-MediciBeer.debug.xcconfig"; sourceTree = "<group>"; };
+		AEAFD849A566A5277B907458 /* libPods-BeerList-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MediciBeer-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9D82DD3AA5A9C2F5EBAAB55 /* Pods-BeerList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediciBeer.release.xcconfig"; path = "Target Support Files/Pods-MediciBeer/Pods-MediciBeer.release.xcconfig"; sourceTree = "<group>"; };
+		CF0250FE7C507365E5F86DD3 /* Pods-BeerListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediciBeerTests.debug.xcconfig"; path = "Target Support Files/Pods-MediciBeerTests/Pods-MediciBeerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E3668D2A42796E73278F67A4 /* libPods-BeerListTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MediciBeerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E78656708D96353781D2E674 /* Pods-BeerList-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediciBeer-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-MediciBeer-tvOSTests/Pods-MediciBeer-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */

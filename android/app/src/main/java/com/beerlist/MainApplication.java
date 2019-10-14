@@ -1,4 +1,4 @@
-package com.medicibeer;
+package com.beerlist;
 
 import android.app.Application;
 import android.util.Log;
